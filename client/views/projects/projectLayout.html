@@ -1,0 +1,27 @@
+<template name="projectLayout">
+	<div class="page-header project-title project-section">
+		<h1>{{project_name}} <small>{{project_code}}</small></h1>
+	</div>
+	<div class="row project-nav project-section">
+		<div class="col-xs-12">
+			<ul class="nav nav-pills projectNav-options">
+			  {{#each getNavOptions}}
+			  <li id="{{template}}"><a class="projectNav-link" href="projects/{{../_id}}/{{navName}}">{{displayName}}</a></li>
+			  {{/each}}
+			</ul>
+		</div>
+	</div>
+	<div class="row project-main project-section">
+		<div class="col-xs-12">
+			{{> Template.dynamic template=getNavTemplate}}
+		</div>
+	</div>
+	<div class="row project-history project-section">
+		<div class="col-xs-12">
+			<h3>History</h3>
+			{{#each changes}}
+				<div><strong>{{user.profile.firstName}}</strong> {{action}} {{#if added}} {{#with change}} revenue for <strong>{{line_item}}</strong> in {{month}} {{/with}} {{else}}<strong>{{fieldChanged}}</strong> from {{previousValue}} to {{currentValue}}{{/if}} - <small class="text-muted"><em>{{formatDate timestamp}}</em></small></div>
+			{{/each}}
+		</div>
+	</div>
+</template>

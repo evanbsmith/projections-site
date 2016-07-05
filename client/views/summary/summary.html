@@ -1,0 +1,17 @@
+<template name="summary">
+	<h1>Annual Revenue</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Type</th>
+				<th>Invoiced</th>
+				<th>Projected</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each lineItems}}
+				{{> summaryRow}}
+			{{/each}}
+		</tbody>
+	</table>
+</template>

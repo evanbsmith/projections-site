@@ -1,0 +1,42 @@
+[
+	{
+		"line_item_name": "Labor",
+		"line_item_class": "labor"
+	},
+	{
+		"line_item_name": "Fringe",
+		"line_item_class": "fringe"
+	},
+	{
+		"line_item_name": "Travel",
+		"line_item_class": "travel"
+	},
+	{
+		"line_item_name": "Subawards",
+		"line_item_class": "subawards"
+	},
+	{
+		"line_item_name": "Allowances",
+		"line_item_class": "allowances"
+	},
+	{
+		"line_item_name": "Supplies",
+		"line_item_class": "supplies"
+	},
+	{
+		"line_item_name": "Equipment",
+		"line_item_class": "equipment"
+	},
+	{
+		"line_item_name": "ODCs",
+		"line_item_class": "odcs"
+	},
+	{
+		"line_item_name": "Overhead",
+		"line_item_class": "overhead"
+	},
+	{
+		"line_item_name": "Fee",
+		"line_item_class": "fee"
+	}
+]

@@ -1,0 +1,28 @@
+<template name="revenueStatusChangeModal">
+	<div class="modal fade" id="revStatusModal-{{month_class}}">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Change Month Status</h4>
+				</div>
+				<div class="modal-body">
+					<p><strong>{{long_name}}</strong> revenue for <strong>{{../project_name}}</strong> is:</p>
+					<select class="form-control">
+					  {{#if invoicedRevenue ..}}
+					  <option value="invoiced" selected>Invoiced</option>
+					  <option value="projected">Projected</option>
+					  {{else}}
+					  <option value="invoiced">Invoiced</option>
+					  <option value="projected" selected>Projected</option>
+					  {{/if}}
+					</select>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success update" data-project="{{../_id}}">Update</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

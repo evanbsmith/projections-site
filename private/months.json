@@ -1,0 +1,74 @@
+[
+	{
+		"index": 0,
+		"long_name": "January",
+		"short_name": "Jan",
+		"month_class": "jan"
+	},
+	{
+		"index": 1,
+		"long_name": "February",
+		"short_name": "Feb",
+		"month_class": "feb"
+	},
+	{
+		"index": 2,
+		"long_name": "March",
+		"short_name": "Mar",
+		"month_class": "mar"
+	},
+	{
+		"index": 3,
+		"long_name": "April",
+		"short_name": "Apr",
+		"month_class": "apr"
+	},
+	{
+		"index": 4,
+		"long_name": "May",
+		"short_name": "May",
+		"month_class": "may"
+	},
+	{
+		"index": 5,
+		"long_name": "June",
+		"short_name": "Jun",
+		"month_class": "jun"
+	},
+	{
+		"index": 6,
+		"long_name": "July",
+		"short_name": "Jul",
+		"month_class": "jul"
+	},
+	{
+		"index": 7,
+		"long_name": "August",
+		"short_name": "Aug",
+		"month_class": "aug"
+	},
+	{
+		"index": 8,
+		"long_name": "September",
+		"short_name": "Sep",
+		"month_class": "sep"
+	},
+	{
+		"index": 9,
+		"long_name": "October",
+		"short_name": "Oct",
+		"month_class": "oct"
+	},
+	{
+		"index": 10,
+		"long_name": "November",
+		"short_name": "Nov",
+		"month_class": "nov"
+	},
+	{
+		"index": 11,
+		"long_name": "December",
+		"short_name": "Dec",
+		"month_class": "dec"
+	}
+]

@@ -1,0 +1,14 @@
+<template name="projectsList">
+	<div>
+		<ul class="nav nav-pills nav-stacked">
+			{{#each projects}}
+				<li class="{{isActivePath regex=getProjectId}}">
+					<a href="{{pathFor route='project.view' data=this}}">
+						<div><strong>{{project_name}}</strong></div>
+						<div><em><small>{{project_code}}</small></em></div>
+					</a>
+				</li>
+	  	  	{{/each}}
+		</ul>
+	</div>
+</template>

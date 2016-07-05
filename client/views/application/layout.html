@@ -1,0 +1,14 @@
+<template name="layout">
+	{{> header}}
+	<div class="container-fluid">	
+		<div class="row">
+			<div class="col-xs-2" id="left-nav">
+				{{> yield region="leftNav"}}
+			</div>
+			<div class="col-xs-10" id="main-content">
+				{{> yield}}
+			</div>
+		</div>
+	</div>
+</template>
+

@@ -1,0 +1,60 @@
+<template name="projectRevenue">
+	<div>
+		<table class="table table-bordered input-table">
+			<thead>
+				<tr>
+					<!-- create one blank for Line Item and one for each month -->
+					<th class=""><div class="header-text">Line Item</div></th>
+					{{#each months}}
+					<th class="">
+						<div class="header-text">{{long_name}}</div>
+						<div class="header-text">
+							<small class="text-capitalize"><em>{{getStatus ..}}</em></small>
+							<a href="#" class="status-dropdown text-right" data-toggle="modal" data-target="#revStatusModal-{{month_class}}"><small>Edit</small></a>
+							
+						</div>
+						{{> revenueStatusChangeModal}}
+					</th>
+					{{/each}}
+					<th class="row-total"><div class="header-text">Total</div></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each lineItems}}
+				<tr>
+					<td>{{line_item_name}}</td>
+					{{#if lineItemRevCheck ..}}
+						{{#each lineItemRevenues ..}}
+							{{#if proxy}}
+							<td class="{{month}} {{line_item}} cell no-data text-right" data-month="{{month}}" data-line="{{line_item}}" data-id="none" data-amount="0" data-project="{{project_id}}">$ --</td>
+							
+							{{else}}
+							<td id="{{_id}}" class="{{month}} {{line_item}} cell text-right {{rev_status}}" data-month="{{month}}" data-line="{{line_item}}" data-id="{{_id}}" data-amount={{amount}} data-project="{{project_id}}">{{formatMoney amount}}</td>
+							{{/if}}
+
+						{{/each}}
+					{{else}}
+						{{#each months}}
+						<td class="{{month_class}} {{../line_item_class}} cell no-data text-right" data-month="{{month_class}}" data-line="{{../line_item_class}}" data-id="none" data-amount="0" data-project="{{../../_id}}">$ --</td>
+						{{/each}}
+					{{/if}}
+					<td class="{{line_item_class}} row-total text-right">{{getRowTotal ..}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+			<tfoot>
+				<tr>
+					<td class="col-total">Total</td>
+					{{#each months}}
+					<td class="{{month_class}} col-total text-right">{{getColumnTotal ..}}</td>
+					{{/each}}
+					<td class="grand-total text-right col-total row-total">{{getGrandTotal}}</td>
+				</tr>
+			</tfoot>
+		</table>
+		<div id="cell-edit-overlay" style="display: none">
+			<input type="text">
+		</div>
+		
+	</div>
+</template>
